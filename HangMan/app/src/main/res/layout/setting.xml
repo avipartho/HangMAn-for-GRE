@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight=".25"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorPrimary"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Difficulty Level" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight=".25"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorPrimary"/>
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/l1"/>
+
+    <LinearLayout
+        android:id="@+id/l2"
+        android:layout_below="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight=".25"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorPrimary"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Wordlist Source" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight=".25"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorPrimary"/>
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/l2"/>
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/spinner2"
+        android:layout_marginTop="10dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line3"
+        android:layout_marginTop="10dp">
+
+        <Switch
+            android:id="@+id/switch_meaning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Meaning"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:checked="true"
+            />
+        <TextView
+            android:id="@+id/switch_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:layout_alignLeft="@+id/switch_meaning"
+            android:layout_below="@+id/switch_meaning"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>
